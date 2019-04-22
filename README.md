@@ -23,6 +23,7 @@ Before you begin work, run the following commands:
 ```
 bundle install
 bundle update
+rake db:create
 ```
 
 ## Requirements
