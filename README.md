@@ -83,20 +83,6 @@ I see a thumbnail image for each comedian
 User Story 4
 
 As a visitor
-When I visit `/comedians`
-Then I see an area at the top of the page called 'Statistics'
-In that 'Statistics' area, I see the following information:
-- the average age of all comedians on the page
-- a unique list of cities for each comedian on the page
-
-Averaging and uniqueness should be done in ActiveRecord NOT
-using Ruby
-```
-
-```
-User Story 5
-
-As a visitor
 When I visit `/comedians?age=34`
 Then I see the list of comedians on the page only shows
 comedians who match the age criteria.
@@ -106,7 +92,7 @@ comedians who match the age criteria.
 ```
 
 ```
-User Story 6
+User Story 5
 
 As a visitor
 When I visit `/comedians`
@@ -116,7 +102,7 @@ of TV specials for every comedian.
 ```
 
 ```
-User Story 7
+User Story 6
 
 As a visitor
 When I visit `/comedians/new`
@@ -128,7 +114,7 @@ And I see the new comedian's data on the page.
 ```
 
 ```
-User Story 8
+User Story 7
 
 As a visitor
 When I visit `/comedians?age=34`
@@ -140,6 +126,20 @@ the page.
 
 - Testing should ensure that calculated statistics are
   correct for a limited subset of data
+```
+
+```
+User Story 8
+
+As a visitor
+When I visit `/comedians`
+Then I see an area at the top of the page called 'Statistics'
+In that 'Statistics' area, I see the following information:
+- the average age of all comedians on the page
+- a unique list of cities for each comedian on the page
+
+Averaging and uniqueness should be done in ActiveRecord NOT
+using Ruby
 ```
 
 ## Extensions
