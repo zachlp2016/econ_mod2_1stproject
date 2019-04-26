@@ -59,7 +59,9 @@ User Story 2
 
 As a visitor
 When I visit `/comedians`
-Then I also see a list of each comedian's TV specials' names
+Then I also see a list of each comedian's TV specials, including
+  * Name of the special
+  * Run Time of the special in minutes
 
 - You may find this information on IMDB.com and other related sites.
 - Your project does not need to include *every* special the comedian has ever made.
@@ -70,8 +72,7 @@ User Story 3
 
 As a visitor
 When I visit `/comedians`
-Where I see a list of each comedian's TV specials' names,
-I also see each special's run-time length in minutes, and a thumbnail image.
+I see a thumbnail image for each comedian
 
 - Image locations (URLs) can be stored in the database as a string.
 - Use the image URLs from IMDB or other online source for the special
