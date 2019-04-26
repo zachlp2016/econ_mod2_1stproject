@@ -87,7 +87,6 @@ When I visit `/comedians`
 Then I see an area at the top of the page called 'Statistics'
 In that 'Statistics' area, I see the following information:
 - the average age of all comedians on the page
-- the average run length of every TV special on the page
 - a unique list of cities for each comedian on the page
 
 Averaging and uniqueness should be done in ActiveRecord NOT
@@ -156,6 +155,12 @@ For example, comedian #4 in your database would have a page like
 
 - Testing should check that only this one comedian's information
   is on the page.
+```
+
+```
+As a user, when I visit `/comedians`,
+I see all previous information
+And, int the statistics area, the average run length of every TV special on the page
 ```
 
 ```
