@@ -97,8 +97,6 @@ User Story 5
 As a visitor
 When I visit `/comedians`
 For each comedian, I see a count of their TV specials
-and the Statistics area on the page should list a total count
-of TV specials for every comedian.
 ```
 
 ```
@@ -160,7 +158,9 @@ For example, comedian #4 in your database would have a page like
 ```
 As a user, when I visit `/comedians`,
 I see all previous information
-And, int the statistics area, the average run length of every TV special on the page
+And, in the statistics area:
+- A total count of specials for all comedians on the page
+- the average run length of every TV special on the page
 ```
 
 ```
