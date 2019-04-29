@@ -51,7 +51,6 @@ information for each comedian:
 - The city attribute can hold birthplace or current known hometown.
 - For testing, you should ensure that the name, age and city only appear on a
   specific area of the page for that single comedian.
-- Minimum of 12 comedians on the page.
 ```
 
 ```
