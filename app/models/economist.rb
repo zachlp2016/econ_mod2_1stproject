@@ -1,0 +1,4 @@
+class Economist < ApplicationRecord
+
+
+end

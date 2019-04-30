@@ -1,0 +1,7 @@
+
+<% @economists.each do |economist| %>
+<div id="economist-<%= economist.id %>"
+<p>Name: <%= economist.name %></p>
+<p>Age: <%= economist.age %></p>
+<p>Hometown: <%= economist.city %></p>
+<% end %>
