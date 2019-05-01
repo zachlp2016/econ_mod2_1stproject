@@ -5,6 +5,7 @@ class CreateEconomists < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :age
       t.string :city
+      t.string :img_url
 
       t.timestamp
     end
