@@ -1,7 +1,22 @@
-
-<% @economists.each do |economist| %>
-<div id="economist-<%= economist.id %>"
-<p>Name: <%= economist.name %></p>
-<p>Age: <%= economist.age %></p>
-<p>Hometown: <%= economist.city %></p>
-<% end %>
+<section class='economist-ctn'>
+  <% @economists.each do |economist| %>
+  <section class='economist-card'>
+    <div id="economist-<%= economist.id %>"
+      <img src="<%= economist.img_url %>" alt="economist photo">
+      <h1>Name: <%= economist.name %></h1>
+      <p>Age: <%= economist.age %></p>
+      <p>Hometown: <%= economist.city %></p>
+      <h3>Economist's Papers</h3>
+      <% economist.papers.each do |paper| %>
+        <div id="economist-papers-<%= paper.id %>"
+          <p>Name: <%= paper.name %></p>
+          <p>Pages: <%= paper.pages %></p>
+          <br>
+        </div>
+      <% end %>
+      <br>
+      <br>
+    </div>
+  </section>
+  <% end %>
+</section>

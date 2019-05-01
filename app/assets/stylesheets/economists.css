@@ -1,0 +1,25 @@
+.economist-ctn {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  justify-content: center;
+}
+
+.economist-card {
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* border-radius: 15px; */
+  width: 29%;
+  padding: 5px;
+  margin: 25px;
+  background-color: #E0E0E0;
+  text-align: center;
+  border:1px solid #021a40;
+}
+
+.economist-card img {
+  max-width: 200px;
+  object-fit: cover;
+  margin-left: 15%;
+  margin-right: 15%;
+}
