@@ -11,7 +11,6 @@ RSpec.describe 'When I visit the index page', type: :feature do
       @paper_1 = @johnmkeynes.papers.create(name: "The General Theory of Employment, Interest, and Money", pages: 472)
       @paper_2 = @johnmkeynes.papers.create(name:  "The Economic Consequences of the Peace", pages: 333)
       @paper_3 = @johnmkeynes.papers.create(name:  "A Treatise on Money", pages: 428)
-
       @johnmkeynes.papers << @paper_1
       @johnmkeynes.papers << @paper_2
       @johnmkeynes.papers << @paper_3
