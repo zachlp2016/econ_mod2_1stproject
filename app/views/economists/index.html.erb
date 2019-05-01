@@ -1,8 +1,8 @@
 <section class='economist-ctn'>
   <% @economists.each do |economist| %>
   <section class='economist-card'>
-    <div id="economist-<%= economist.id %>"
-      <img src="<%= economist.img_url %>" alt="economist photo">
+    <div id="economist-<%= economist.id %>">
+      <img src="<%= economist.img_url %>" alt="economist photo"></img>
       <h1>Name: <%= economist.name %></h1>
       <p>Age: <%= economist.age %></p>
       <p>Hometown: <%= economist.city %></p>
