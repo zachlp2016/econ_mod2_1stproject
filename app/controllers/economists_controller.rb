@@ -2,7 +2,6 @@ class EconomistsController < ApplicationController
 
   def index
     @economists = Economist.all
-
   end
 
   def new
@@ -12,10 +11,8 @@ class EconomistsController < ApplicationController
   def create
     @new_economist = Economist.create(strong_params)
     @new_economist.save
-    
     redirect_to economists_path
   end
-
 
   private
 

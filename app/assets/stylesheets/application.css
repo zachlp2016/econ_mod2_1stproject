@@ -109,3 +109,14 @@ a:active {
 
 
 }
+
+.hometowns {
+  margin-left: 100px;
+  display: inline;
+  margin-left: 1rem;
+  font-size: 1.65rem;
+  color: 	#585858;
+  font-family: 'Muli', sans-serif;
+  text-decoration: none;
+
+}
