@@ -1,0 +1,24 @@
+<section class='economist-ctn'>
+  <section class='economist-card'>
+    <div id="economist-<%= @economist.id %>">
+      <img src="<%= @economist.img_url %>" alt="economist photo"></img>
+      <h1>Name: <%= @economist.name %></h1>
+      <% if @economist.age == 0 %>
+      <p>Age: <%= "deceased" %></p>
+      <% else %>
+      <p>Age: <%= @economist.age %></p>
+      <% end %>
+      <p>Hometown: <%= @economist.city %></p>
+      <p>Number of Papers: <%= @economist.paper_count %></p>
+      <h3>Economist's Papers</h3>
+      <% @economist.papers.each do |paper| %>
+        <div id="economist-papers-<%= paper.id %>"
+          <p>Name: <%= paper.name %></p>
+          <p>Pages: <%= paper.pages %></p>
+          <br>
+        </div>
+      <% end %>
+      <br>
+      <br>
+    </div>
+</section>
