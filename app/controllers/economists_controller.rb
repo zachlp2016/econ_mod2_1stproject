@@ -6,6 +6,10 @@ class EconomistsController < ApplicationController
     @total_papers = Economist.total_papers
     @average_pages = Economist.average_pages
 
+    age = params[:age]
+    if age != nil
+      @economists = Economist.where(age: (params[:age]))
+    end
   end
 
   def show
