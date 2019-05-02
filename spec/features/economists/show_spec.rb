@@ -28,13 +28,3 @@ RSpec.describe 'Economist show page shows profile information' do
     end
   end
 end
-
-
-
-# that comedian's information and TV specials.
-#
-# For example, comedian #4 in your database would have a page like
-# `/comedians/4`
-#
-# - Testing should check that only this one comedian's information
-#   is on the page.

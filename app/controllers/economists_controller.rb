@@ -2,6 +2,10 @@ class EconomistsController < ApplicationController
 
   def index
     @economists = Economist.all
+    @average_age = Economist.average_age
+    @total_papers = Economist.total_papers
+    @average_pages = Economist.average_pages
+
   end
 
   def show
