@@ -8,18 +8,23 @@
   <h2>Total Number of Papers in database: <%= @total_papers.to_i %></h2>
   <br>
   <h2>Average Number of Pages for Papers in database: <%= @average_pages.to_i %></h2>
+  <br>
+  <br>
   <section class="hometowns">Hometowns:
     <% @economists.hometowns.each do |town|%>
     <%= town %>
     <% end %>
     <br>
   </section>
+  <br>
+  <br>
 </section>
 
 <section class='economist-ctn'>
   <% @economists.each do |economist| %>
   <section class='economist-card'>
     <div id="economist-<%= economist.id %>">
+      <br>
       <img src="<%= economist.img_url %>" alt="economist photo"></img>
       <h2>Name: <%= link_to economist.name, economist_path(economist) %></h2>
       <br>

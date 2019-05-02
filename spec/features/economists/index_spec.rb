@@ -56,10 +56,16 @@ RSpec.describe 'When I visit the index page', type: :feature do
       expect(page).to have_content("Hometowns: Vienna Trier Cambridge Augusta San Francisco New York City")
     end
   end
-end
 
-# As a user, when I visit `/comedians`,
-# I see all previous information
-# And, in the statistics area:
-# - A total count of specials for all comedians on the page
-# - the average run length of every TV special on the page
+  it 'can choose what age to see by typing in the browser bar' do
+    visit '/economists?age=72'
+
+    expect(page).to have_content("Name: #{@janetyellen.name}")
+    expect(page).to have_content("Age: 72")
+    expect(page).to have_content("Hometown: #{@janetyellen.city}")
+    expect(page).to have_content("Number of Papers: #{@janetyellen.paper_count}")
+
+
+    expect(page).to_not have_content("Name: #{@johnmkeynes.name}")
+  end
+end
