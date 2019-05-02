@@ -1,3 +1,18 @@
+<section class="statistics-area">
+
+  <h1>Statistics: </h1>
+  <br>
+  <br>
+  <h2>Average age: <%= @economists.average_age.round(2) %></h2>
+  <br>
+  <section class="hometowns">Hometowns:
+    <% @economists.hometowns.each do |town|%>
+    <%= town %>
+    <% end %>
+    <br>
+  </section>
+</section>
+
 <section class='economist-ctn'>
   <% @economists.each do |economist| %>
   <section class='economist-card'>

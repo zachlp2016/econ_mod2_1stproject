@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20190430220739) do
 
   create_table "economists", force: :cascade do |t|
     t.string "name"
-    t.string "age"
+    t.integer "age"
     t.string "city"
     t.string "img_url"
   end
