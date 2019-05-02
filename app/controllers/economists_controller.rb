@@ -4,6 +4,10 @@ class EconomistsController < ApplicationController
     @economists = Economist.all
   end
 
+  def show
+    @economist = Economist.find(params[:id])
+  end
+
   def new
     @economist = Economist.new
   end

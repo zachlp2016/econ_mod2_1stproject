@@ -24,7 +24,7 @@ RSpec.describe 'When I visit the index page', type: :feature do
     within "#economist-#{@johnmkeynes.id}" do
       # expect(page).to have_xpath("//img[@src = '#{@johnmkeynes.img_url}' and @alt='economist photo']")
       expect(page).to have_content("Name: #{@johnmkeynes.name}")
-      expect(page).to have_content("Age: #{@johnmkeynes.age}")
+      expect(page).to have_content("Age: deceased")
       expect(page).to have_content("Hometown: #{@johnmkeynes.city}")
       expect(page).to have_content("Number of Papers: #{@johnmkeynes.paper_count}")
     end
@@ -32,7 +32,7 @@ RSpec.describe 'When I visit the index page', type: :feature do
     within "#economist-#{@friedrichhayek.id}" do
       # expect(page).to have_xpath("//img[@src = '#{@johnmkeynes.img_url}' and @alt='economist photo']")
       expect(page).to have_content("Name: #{@friedrichhayek.name}")
-      expect(page).to have_content("Age: #{@friedrichhayek.age}")
+      expect(page).to have_content("Age: deceased")
       expect(page).to have_content("Hometown: #{@friedrichhayek.city}")
       expect(page).to have_content("Number of Papers: #{@friedrichhayek.paper_count}")
     end
