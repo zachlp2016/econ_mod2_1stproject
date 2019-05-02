@@ -6,7 +6,7 @@
       <h1>Name: <%= economist.name %></h1>
       <p>Age: <%= economist.age %></p>
       <p>Hometown: <%= economist.city %></p>
-      <p>Number of Papers: <%= economist.paper_count.to_s %></p>
+      <p>Number of Papers: <%= economist.paper_count %></p>
       <h3>Economist's Papers</h3>
       <% economist.papers.each do |paper| %>
         <div id="economist-papers-<%= paper.id %>"
@@ -15,7 +15,6 @@
           <br>
         </div>
       <% end %>
-
       <br>
       <br>
     </div>
