@@ -47,10 +47,19 @@ RSpec.describe 'When I visit the index page', type: :feature do
 
     within ".statistics-area" do
       expect(page).to have_content("Average age: 77")
+      expect(page).to have_content("Total Number of Papers in database: 3")
+      expect(page).to have_content("Average Number of Pages for Papers in database: 411")
     end
+
 
     within ".hometowns" do
       expect(page).to have_content("Hometowns: Vienna Trier Cambridge Augusta San Francisco New York City")
     end
   end
 end
+
+# As a user, when I visit `/comedians`,
+# I see all previous information
+# And, in the statistics area:
+# - A total count of specials for all comedians on the page
+# - the average run length of every TV special on the page

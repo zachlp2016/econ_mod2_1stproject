@@ -2,7 +2,9 @@
   <section class='economist-card'>
     <div id="economist-<%= @economist.id %>">
       <img src="<%= @economist.img_url %>" alt="economist photo"></img>
-      <h1>Name: <%= @economist.name %></h1>
+      <h2>Name: <%= @economist.name %></h2>
+      <br>
+      <br>
       <% if @economist.age == 0 %>
       <p>Age: <%= "deceased" %></p>
       <% else %>
@@ -10,11 +12,19 @@
       <% end %>
       <p>Hometown: <%= @economist.city %></p>
       <p>Number of Papers: <%= @economist.paper_count %></p>
-      <h3>Economist's Papers</h3>
-      <% @economist.papers.each do |paper| %>
-        <div id="economist-papers-<%= paper.id %>"
+      <h2>Economist's Papers</h2>
+      <br>
+      <% if @economist.papers.count == 0 %>
+        <br>
+        <p>This economist has no papers in the database</p>
+      <% else %>
+        <% @economist.papers.each do |paper| %>
+        <div id="economist-papers-<%= paper.id %>">
+          <br>
           <p>Name: <%= paper.name %></p>
           <p>Pages: <%= paper.pages %></p>
+          <br>
+      <% end %>
           <br>
         </div>
       <% end %>

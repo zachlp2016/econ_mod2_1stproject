@@ -36,7 +36,7 @@ RSpec.describe Economist, type: :model do
 
     it '.average_ages' do
       expected = 77.0
-      actual = Economist.average_age
+      actual = Economist.average_age.to_s.to_f
       expect(actual).to eq(expected)
     end
 
@@ -45,5 +45,24 @@ RSpec.describe Economist, type: :model do
       actual = Economist.hometowns
       expect(actual).to eq(expected)
     end
+
+    it '.total_papers' do
+      expected = 3
+      actual = Economist.total_papers
+      expect(actual).to eq(expected)
+    end
+
+    it '.average_pages' do
+      expected = 411.0
+      actual = Economist.average_pages.to_s.to_f
+      expect(actual).to eq(expected)
+    end
   end
 end
+
+
+# As a user, when I visit `/comedians`,
+# I see all previous information
+# And, in the statistics area:
+# - A total count of specials for all comedians on the page
+# - the average run length of every TV special on the page
