@@ -57,7 +57,7 @@ RSpec.describe 'When I visit the index page', type: :feature do
     end
   end
 
-  it 'can choose what age to see by typing in the browser bar' do
+  it 'can choose what economist to see by searching for a specific age in browser bar' do
     visit '/economists?age=72'
 
     expect(page).to have_content("Name: #{@janetyellen.name}")
@@ -68,4 +68,18 @@ RSpec.describe 'When I visit the index page', type: :feature do
 
     expect(page).to_not have_content("Name: #{@johnmkeynes.name}")
   end
+
+  it 'can choose what economist to see by searching for a specific name in browser bar' do
+    visit '/economists?name=Janet Yellen'
+
+    expect(page).to have_content("Name: #{@janetyellen.name}")
+    expect(page).to have_content("Age: 72")
+    expect(page).to have_content("Hometown: #{@janetyellen.city}")
+    expect(page).to have_content("Number of Papers: #{@janetyellen.paper_count}")
+
+
+    expect(page).to_not have_content("Name: #{@johnmkeynes.name}")
+  end
+
+
 end

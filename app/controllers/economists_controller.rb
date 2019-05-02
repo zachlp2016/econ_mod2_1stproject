@@ -7,8 +7,11 @@ class EconomistsController < ApplicationController
     @average_pages = Economist.average_pages
 
     age = params[:age]
+    name = params[:name]
     if age != nil
       @economists = Economist.where(age: (params[:age]))
+    elsif name != nil
+      @economists = Economist.where(name: (params[:name]))
     end
   end
 
