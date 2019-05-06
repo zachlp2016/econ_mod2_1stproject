@@ -45,18 +45,6 @@ RSpec.describe Economist, type: :model do
       actual = Economist.hometowns
       expect(actual).to eq(expected)
     end
-
-    it '.total_papers' do
-      expected = 3
-      actual = Economist.total_papers
-      expect(actual).to eq(expected)
-    end
-
-    it '.average_pages' do
-      expected = 411.0
-      actual = Economist.average_pages.to_s.to_f
-      expect(actual).to eq(expected)
-    end
   end
 end
 

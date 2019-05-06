@@ -57,7 +57,7 @@ RSpec.describe 'When I visit the index page', type: :feature do
     end
   end
 
-  it 'can choose what economist to see by searching for a specific age in browser bar' do
+  xit 'can choose what economist to see by searching for a specific age in browser bar' do
     visit '/economists?age=72'
 
     expect(page).to have_content("Name: #{@janetyellen.name}")
@@ -69,8 +69,32 @@ RSpec.describe 'When I visit the index page', type: :feature do
     expect(page).to_not have_content("Name: #{@johnmkeynes.name}")
   end
 
-  it 'can choose what economist to see by searching for a specific name in browser bar' do
-    visit '/economists?name=Janet Yellen'
+  xit 'can see a sorted list on the index page by the name of the economists' do
+    visit `/economists?sort=name`
+    expected = Economist.order(:name)
+
+    expect(expected).to eq(actual)
+  end
+
+  xit 'can choose what economist to see by searching for a specific city in browser bar' do
+    visit `/econommists?sort=city`
+
+    expect(page).to have_content("Name: #{@janetyellen.name}")
+    expect(page).to have_content("Name: #{@janetyellen.name}")
+    expect(page).to have_content("Name: #{@janetyellen.name}")
+    expect(page).to have_content("Name: #{@janetyellen.name}")
+    expect(page).to have_content("Name: #{@janetyellen.name}")
+    expect(page).to have_content("Name: #{@janetyellen.name}")
+    expect(page).to have_content("Age: 72")
+    expect(page).to have_content("Hometown: #{@janetyellen.city}")
+    expect(page).to have_content("Number of Papers: #{@janetyellen.paper_count}")
+
+
+    expect(page).to_not have_content("Name: #{@johnmkeynes.name}")
+  end
+
+  xit 'can choose what economist to see by searching for a specific name in browser bar' do
+    visit `/econommists?sort=age`
 
     expect(page).to have_content("Name: #{@janetyellen.name}")
     expect(page).to have_content("Age: 72")
@@ -83,3 +107,10 @@ RSpec.describe 'When I visit the index page', type: :feature do
 
 
 end
+
+# As a user, when I visit `/comedians?sort=city`
+# Then I see all previous information, but all comedians are
+# sorted alphabetically by the name of their city.
+# As a user, when I visit `/comedians?sort=age`
+# Then I see all previous information, but all comedians are
+# sorted alphabetically by the age of the comedian.

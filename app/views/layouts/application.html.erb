@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <div class="title">Just an Economist Page</div>
+    <header>
+      <ul class="top-nav">
+        <%= link_to 'Economists', economists_path %>
+        <%= link_to 'New Economist', new_economist_path %>
+      </ul>
+    </header>
     <%= yield %>
   </body>
 </html>
