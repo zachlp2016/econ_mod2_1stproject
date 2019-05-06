@@ -3,15 +3,20 @@ class EconomistsController < ApplicationController
   def index
     @economists = Economist.all
     @average_age = Economist.average_age
-    @total_papers = Economist.total_papers
-    @average_pages = Economist.average_pages
+    @total_papers = Paper.total_papers
+    @average_pages = Paper.average_pages
+    @hometowns = Economist.hometowns
+
+
+    if params[:sort] != nil
+      if params[:sort] == "name" || params[:sort] == "age" || params[:sort] == "city"
+        @economists = Economist.sort_by(params)
+      end
+    end
 
     age = params[:age]
-    name = params[:name]
     if age != nil
       @economists = Economist.where(age: (params[:age]))
-    elsif name != nil
-      @economists = Economist.where(name: (params[:name]))
     end
   end
 

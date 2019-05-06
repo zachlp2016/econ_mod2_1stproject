@@ -16,11 +16,13 @@ class Economist < ApplicationRecord
     distinct(:city).pluck(:city)
   end
 
-  def self.total_papers
-    joins(:papers).count
-  end
-
-  def self.average_pages
-    joins(:papers).average(:pages)
+  def self.sort_by(params)
+    if params[:sort] == "name"
+      order(:name)
+    elsif params[:sort] == "age"
+      order(:age)
+    elsif params[:sort] == "city"
+      order(:city)
+    end
   end
 end

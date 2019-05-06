@@ -1,3 +1,5 @@
+
+
 <section class="statistics-area">
 
   <h1>Statistics: </h1>
@@ -11,13 +13,21 @@
   <br>
   <br>
   <section class="hometowns">Hometowns:
-    <% @economists.hometowns.each do |town|%>
+    <% @hometowns.each do |town|%>
     <%= town %>
     <% end %>
     <br>
   </section>
   <br>
   <br>
+</section>
+<section class="sort_field">
+  <%= form_tag economists_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :sort, params[:sort] %>
+      <%= submit_tag "Sort", :name => nil %>
+    </p>
+  <% end %>
 </section>
 
 <section class='economist-ctn'>
